@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root{
     --back-ground-color:#242635;
@@ -28,7 +28,7 @@ body{
 }
 h1{
     font-size: var(--tittles-mobile-size);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--secundary-color);
 }
 h2{
@@ -39,4 +39,94 @@ h2{
 p{
     font-size: var(--body-text-size-mobile);
     color: var(--principal-color);
+}
+
+
+nav>div img{
+    width: 50px;
+}
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+input#menu-hamburguesa~ul{
+    background-color: tomato;
+    width: 100%;
+    list-style: none;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    transition: all 30ms linear;
+}
+
+input#menu-hamburguesa:checked ~ ul{
+    right: 0;
+}
+
+@media only screen and ( min-width:768px ) {
+    label{
+        display: none;
+    }
+
+    input#menu-hamburguesa~ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+    }
+
+    input#menu-hamburguesa~ul>li{
+        padding: 0 1rem;
+    }
+}
+
+section.home{
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+section.home>div>hr{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+
+}
+section.home>div>p.iam>span{
+    color: var(--principal-color);
+    font-size: 30px;
+}
+.rigth{
+    width: 30%;
+}
+section.home>div.rigth>p{
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+section.home>div>p>span{
+    color: var(--secundary-color);
+}
+.rigth>div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+.rigth>div>button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.bottom-home{
+    width: 90vw;
+    background-color: var(--principal-color);
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
 }
