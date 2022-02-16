@@ -70,7 +70,7 @@ input#menu-hamburguesa~ul{
     top: -100%;
     transition: all 30ms linear;
     text-align: center;
-    color: var(--background-color);
+    color: var(--back-ground-section);
     font-size: 20px;
     font-weight: 600;
 }
@@ -242,3 +242,71 @@ footer>span{
     font-size: var(--subsection-text-mobile-size);
     font-weight: 600;
 }
+
+/* ---CAROUSEL---*/
+
+.carousel-section{
+    margin: 3rem;
+}
+
+.carousel-section>h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.carousel__contenedor{
+    position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    top: calc(50% - 25px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #ffffff;
+    opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+    opacity: 100%;
+}
+
+.carousel__anterior{
+    left: -30px;
+}
+.carousel__siguiente{
+    right: -30px;
+}
+
+.carousel__lista{
+    overflow: hidden;
+}
+
+.carousel__elemento{
+    text-align: center;
+    margin: .2rem;
+}
+
+.carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #ffffff;
+    opacity: .2;
+    border-radius: 0;
+
+}
+.carousel__indicadores .glider-dot:hover {
+    opacity: .5;
+}
+.carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
