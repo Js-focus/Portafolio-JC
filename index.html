@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Carlos</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -63,8 +64,31 @@
         <h2>Acerca de mí</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, adipisci commodi ex accusantium odit velit dolorum sed officia deserunt eligendi expedita saepe accusamus eveniet natus asperiores possimus quasi? Ipsa accusamus laboriosam deleniti. Facilis mollitia quo dignissimos eos voluptates nam amet nihil, iure aliquam unde earum velit! In numquam eveniet rerum.</p>
     </section>
-    <section>
+    <section class="servicios">
         <h2>Servicios</h2>
+        <div class="contenedor-cards">    
+            <div id="card">
+                <div>
+                    <img src="./assets/iconos/iconoir_design-pencil.svg" alt="">
+                </div>
+                <p>UX/UI Design</p>
+                <p>Desde diseño hasta implementacion del desarrollo</p>
+            </div>
+            <div id="card">
+                <div>
+                    <img src="./assets/iconos/majesticons_speakerphone-line.svg" alt="">
+                </div>
+                <p>Marketing</p>
+                <p>Diseño hasta implementacion del desarrollo</p>
+            </div>
+            <div id="card">
+                <div>
+                    <img src="./assets/iconos/feather_search.svg" alt="">
+                </div>
+                <p>Research</p>
+                <p>Desde diseño hasta implementacion del desarrollo</p>
+            </div>
+        </div>    
     </section>
     <section>
         <h2>Mis habilidades</h2>
@@ -123,8 +147,11 @@
     <footer>
         <span>Hecho con 💙 en Academlo</span>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/8129ad6da1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="./js/carousel-porfolio.js"></script>
+    <script src="./js/carousel-servicios.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

@@ -43,6 +43,16 @@ p{
     text-align: justify;
     line-height: 1.8rem;
 }
+
+
+
+/*Styles de la nav*/
+/*nav{
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    
+}*/
 nav>div {
     display: flex;
     flex-direction: row;
@@ -79,22 +89,12 @@ input#menu-hamburguesa:checked ~ ul{
     top: 50px;
 }
 
-@media only screen and ( min-width:768px ) {
-    label{
-        display: none;
-    }
 
-    input#menu-hamburguesa~ul{
-        position: static;
-        background-color: transparent;
-        display: flex;
-    }
 
-    input#menu-hamburguesa~ul>li{
-        padding: 0 1rem;
-    }
-}
 
+
+
+/*Styles del section home*/
 section.home{
     height: 50vh;
     margin: 0 2rem;
@@ -162,6 +162,12 @@ section.home>div>p>span{
     margin-right: auto;
     display: block;
 }
+
+
+
+
+
+/*Style section about*/
 .about{
     margin: 3rem 1rem;
 }
@@ -173,86 +179,53 @@ section.home>div>p>span{
 
 
 
-.contact{
+/*Styles section servicios*/
+.servicios{
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
-.contact>h2{
-    text-align: center;
-    margin: 2rem 0;
+.servicios>h2{
+    margin-bottom: 2.5rem;
 }
-#phone{
-    width: 15rem;
-    height: 14rem;
-    background-color: var(--back-ground-section);
-    margin: 1rem 1rem;
-    border-radius: .5rem;
+.contenedor-cards{
+    display: flex;
+    flex-direction: row;
+    margin: .5rem 1rem;
+}
+#card{
+    width: 225px;
+    height: 300px;
+    background: var(--back-ground-section);
+    margin: 0 .5rem;
+    padding: 0 1.5rem;
+    border-radius: .2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#phone>div + span{
-    font-size: var(--subsection-text-mobile-size);
-    font-weight: 600;
-    margin: 1rem 0;
-}
-#phone> div + span + span{
-    color: var(--principal-color);
-    font-weight: 600;
-}
-#email{
-    width: 15rem;
-    height: 14rem;
-    background-color: var(--back-ground-section);
-    margin: 1rem 1rem;
-    border-radius: .5rem;
-    align-self: end;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#email> div + span{
-    font-size: var(--subsection-text-mobile-size);
-    font-weight: 600;
-    margin: 1rem 0;
-}
-#email> div + span + span{
-    color: var(--principal-color);
-    font-weight: 600;
-}
 
 
 
 
 
-footer{
-    width: 100vw;
-    height: 5rem;
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-footer>span{
-    text-align: center;
-    color: var(--secundary-color);
-    font-size: var(--subsection-text-mobile-size);
-    font-weight: 600;
-}
 
-/* ---CAROUSEL---*/
+
+/*Styles section mi portafolio*/
 
 .carousel-section{
-    margin: 3rem;
+    margin: 2rem;
 }
 
 .carousel-section>h2{
     text-align: center;
     margin-bottom: 2rem;
 }
+
+/*Creacion de estilos carrusel con libreria glider.js*/
 .carousel__contenedor{
     position: relative;
 }
@@ -310,3 +283,104 @@ footer>span{
     opacity: 1;
 }
 
+
+
+
+
+
+
+/*Styles section contact*/
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.contact>h2{
+    text-align: center;
+    margin: 2rem 0;
+}
+#phone{
+    width: 15rem;
+    height: 14rem;
+    background-color: var(--back-ground-section);
+    margin: 1rem 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#phone>div + span{
+    font-size: var(--subsection-text-mobile-size);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+#phone> div + span + span{
+    color: var(--principal-color);
+    font-weight: 600;
+}
+#email{
+    width: 15rem;
+    height: 14rem;
+    background-color: var(--back-ground-section);
+    margin: 1rem 1rem;
+    border-radius: .5rem;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#email> div + span{
+    font-size: var(--subsection-text-mobile-size);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+#email> div + span + span{
+    color: var(--principal-color);
+    font-weight: 600;
+}
+
+
+
+
+
+
+/*Styles section footer*/
+
+footer{
+    width: 100vw;
+    height: 5rem;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer>span{
+    text-align: center;
+    color: var(--secundary-color);
+    font-size: var(--subsection-text-mobile-size);
+    font-weight: 600;
+}
+
+
+
+
+/*MEDIA QUERYS*/
+
+@media only screen and ( min-width:768px ) {
+    label{
+        display: none;
+    }
+
+    input#menu-hamburguesa~ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+    }
+
+    input#menu-hamburguesa~ul>li{
+        padding: 0 1rem;
+    }
+}
