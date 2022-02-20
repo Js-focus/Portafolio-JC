@@ -12,7 +12,7 @@
     --subsection-text-mobile-size: 18px;
     --body-text-size-mobile: 16px;
     /*Desktop var*/
-    --tittles-desktop-size: 150px;
+    --tittles-desktop-size: 130px;
     --subtittle-desktop-size: 50px;
     --subsection-text-desktop-size: 45px;
     --body-text-size-desktop: 18px;
@@ -43,9 +43,21 @@ p{
     text-align: justify;
     line-height: 1.8rem;
 }
+@media only screen and ( min-width:768px ) {
+h1{
+    font-size: var(--tittles-desktop-size);
+}
+h2{
+    font-size: var(--subtittle-mobile-size);
 
-
-
+}
+p{
+    font-size: var(--subsection-text-desktop-size);
+    color: var(--principal-color);
+    text-align: justify;
+    line-height: 5rem;
+}
+}
 /*Styles de la nav*/
 /*nav{
     min-width: 100%;
@@ -88,7 +100,7 @@ input#menu-hamburguesa~ul{
 input#menu-hamburguesa:checked ~ ul{
     top: 50px;
 }
-
+    
 
 
 
@@ -96,7 +108,7 @@ input#menu-hamburguesa:checked ~ ul{
 
 /*Styles del section home*/
 section.home{
-    height: 50vh;
+    height: 32vh;
     margin: 0 2rem;
     display: flex;
     flex-direction: row;
@@ -105,11 +117,6 @@ section.home{
     background-image: url(../assets/vectores/Ellipse\ 14.svg);
     background-repeat:no-repeat;
     background-position: center top;
-}
-section.home>div>hr{
-    margin-top: .5rem;
-    margin-bottom: 1rem;
-
 }
 section.home>div>p.iam>span{
     color: var(--principal-color);
@@ -163,7 +170,19 @@ section.home>div>p>span{
     display: block;
 }
 
+@media only screen and ( min-width:768px ) {
+    section.home{
+        height: 85vh;
+        background-image: none;
+        background-image: url(../assets/vectores/2.svg);
+        background-position: center bottom;
+        background-size: contain;
+    }    
+    .bottom-home{
+        margin-top: -3rem;
+    }
 
+}
 
 
 
@@ -221,12 +240,10 @@ section.home>div>p>span{
 }
 .carousel-anterior,
 .carousel-siguiente {
-    position: absolute;
-    display: block;
+    display: flex;
     width: 35px;
     height: 35px;
     border: none;
-    top: calc(50% - 25px);
     cursor: pointer;
     line-height: 30px;
     text-align: center;
@@ -251,7 +268,12 @@ section.home>div>p>span{
     overflow: hidden;
 }
 
-
+@media only screen and (min-width: 600px){
+    .carousel-anterior,
+    .carousel-siguiente {
+        display: none;
+}
+}
 
 
 
@@ -384,7 +406,30 @@ section.home>div>p>span{
     font-weight: 600;
 }
 
-
+@media only screen and (min-width: 481px){
+    #phone{
+        margin: 1rem 5%;
+    }   
+    #email{
+        margin: 1rem 5%;
+    } 
+}
+@media only screen and (min-width: 768px){
+    #phone{
+        margin: 1rem 20%;
+    }   
+    #email{
+        margin: 1rem 20%;
+    } 
+}
+@media only screen and (min-width: 1280px){
+    #phone{
+        margin: 1rem 30%;
+    }   
+    #email{
+        margin: 1rem 30%;
+    } 
+}
 
 
 
@@ -420,9 +465,15 @@ footer>span{
         position: static;
         background-color: transparent;
         display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        max-height: 10rem;
     }
 
     input#menu-hamburguesa~ul>li{
-        padding: 0 1rem;
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
