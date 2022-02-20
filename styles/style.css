@@ -167,6 +167,8 @@ section.home>div>p>span{
 
 
 
+
+
 /*Style section about*/
 .about{
     margin: 3rem 1rem;
@@ -179,7 +181,11 @@ section.home>div>p>span{
 
 
 
+
+
+
 /*Styles section servicios*/
+
 .servicios{
     display: flex;
     flex-direction: column;
@@ -187,10 +193,16 @@ section.home>div>p>span{
     justify-content: center;
     margin-bottom: 3rem;
 }
+
 .servicios>h2{
     margin-bottom: 2.5rem;
 }
-.contenedor-cards{
+.carousel-cards-contenedor{
+    max-width: 70vw;
+    margin: auto;
+
+}
+.carousel-lista-cards{
     display: flex;
     flex-direction: row;
     margin: .5rem 1rem;
@@ -207,7 +219,37 @@ section.home>div>p>span{
     justify-content: center;
     align-items: center;
 }
+.carousel-anterior,
+.carousel-siguiente {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    top: calc(50% - 25px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #ffffff;
+    opacity: 20%;
+}
 
+.carousel-anterior:hover,
+.carousel-siguiente:hover {
+    opacity: 100%;
+}
+
+.carousel-anterior{
+    left: -30px;
+}
+.carousel-siguiente{
+    right: -30px;
+}
+
+.carousel__lista{
+    overflow: hidden;
+}
 
 
 
