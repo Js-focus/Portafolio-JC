@@ -26,7 +26,8 @@ body{
     background-color: var(--back-ground-color);
     font-family: 'Montserrat', sans-serif;
     font-size: var(--body-text-size-mobile);
-}
+  
+}    
 h1{
     font-size: var(--tittles-mobile-size);
     font-weight: 700;
@@ -96,7 +97,7 @@ input#menu-hamburguesa:checked ~ ul{
 
 /*Styles del section home*/
 section.home{
-    height: 32vh;
+    height: 50vh;
     margin: 0 2rem;
     display: flex;
     flex-direction: row;
@@ -105,6 +106,8 @@ section.home{
     background-image: url(../assets/vectores/Ellipse\ 14.svg);
     background-repeat:no-repeat;
     background-position: center top;
+    background-size: auto;
+    
 }
 section.home>div>p.iam>span{
     color: var(--principal-color);
@@ -179,8 +182,8 @@ section.home>div>p>span{
 
 
 
-/*Styles section servicios*/
-
+/*Styles section servicios se elimina section*/
+/* 
 .servicios{
     display: flex;
     flex-direction: column;
@@ -243,7 +246,7 @@ section.home>div>p>span{
 .carousel__lista{
     overflow: hidden;
 }
-
+*/
 
 
 
@@ -411,6 +414,12 @@ footer>span{
     #email{
         margin: 1rem 5%;
     } 
+    .home{
+        background-size: contain;
+    }
+    .bottom-home{
+        margin-top: -30px;
+    }
 }
 @media only screen and (min-width: 768px){
     #phone{
@@ -419,6 +428,9 @@ footer>span{
     #email{
         margin: 1rem 20%;
     } 
+    .home{
+        background-size: cover;
+    }
     label{
         display: none;
     }
@@ -437,7 +449,8 @@ footer>span{
         background-image: none;
         background-image: url(../assets/vectores/2.svg);
         background-position: center bottom;
-        background-size: 50%;
+        background-size: contain;
+        
     }
 
     input#menu-hamburguesa~ul>li{
@@ -475,7 +488,7 @@ footer>span{
         background-image: none;
         background-image: url(../assets/vectores/2.svg);
         background-position: center bottom;
-        background-size: 50%;
+        background-size: contain;
         
     }    
     .bottom-home{
